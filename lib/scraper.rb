@@ -16,8 +16,8 @@ class Scraper
   end
 
   def make_courses
-    self.get_courses.map do |course|
-      Course.new(course)
+    self.get_courses.map do |post|
+      course = Course.new
     end
   end
 
