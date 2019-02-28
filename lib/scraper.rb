@@ -12,11 +12,11 @@ class Scraper
 
   def get_courses
     self.get_page.css('h2')
+    binding.pry
   end
 
   def make_courses
     self.get_courses.map do |course|
-      binding.pry
       Course.new(course.text)
     end
   end
