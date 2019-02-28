@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 require_relative './course.rb'
 
@@ -13,7 +14,8 @@ class Scraper
     self.get_page.css('h2')
   end
 
-  def make_courses
+  def make_courses(input)
+    binding.pry
     self.get_courses.map {|course| Course.new(course)}
   end
 
