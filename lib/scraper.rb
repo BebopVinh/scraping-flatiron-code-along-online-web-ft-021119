@@ -14,9 +14,10 @@ class Scraper
     self.get_page.css('h2')
   end
 
-  def make_courses(input)
-    binding.pry
-    self.get_courses.map {|course| Course.new(course)}
+  def make_courses
+    self.get_courses.map do |course|
+      binding.pry
+    end
   end
 
   def print_courses
