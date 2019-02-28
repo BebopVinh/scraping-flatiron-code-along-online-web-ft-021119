@@ -16,7 +16,7 @@ class Scraper
 
   def make_courses
     self.get_courses.map do |course|
-      binding.pry
+      Course.new(course.text)
     end
   end
 
