@@ -13,6 +13,10 @@ class Scraper
     self.get_page.css('h2')
   end
 
+  def make_courses
+    self.get_courses.map {|course| Course.new(course)}
+  end
+
   def print_courses
     self.make_courses
     Course.all.each do |course|
